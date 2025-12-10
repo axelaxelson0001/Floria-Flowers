@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <title>Prenumeration | Floria Flowers</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Floria Flowers">
+  <meta name="description"
+    content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+</head>
+
+<body id="start">
+  <!--HEADER-->
+  <header class="header">
+    <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+        <!--Loggotyp och länk till startsidan-->
+      </div>
+      <div class="search-box"> <!--Sökruta (placeholder)-->
+        <form>
+          <input type="search" placeholder="Sök efter växter, blommor och fröer">
+          <button type="submit"><img class="icon" src="images/search.svg"
+              alt="Sökikon i form av ett förstoringsglas"></button>
+        </form>
+      </div>
+      <div class="icon-box">
+        <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+        <!--Länk till användarens sida-->
+        <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+        <!--Länk till användarens kundvagn-->
+      </div>
+    </nav>
+    <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+      <ul>
+        <li><a href="campaign.html">Kampanj</a></li>
+        <li><a href="flowers.html">Blommor</a></li>
+        <li><a href="seeds.html">Fröer</a></li>
+        <li><a href="plants.html">Växter</a></li>
+        <li><a href="subscription.html" class="current-page">Prenumeration</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+      <a href="campaign.html">
+        <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="carousel"> <!-- Tillhörande JavaScript finns under "script"-->
+
+      <div class="carousel-item-box" id="carousel-subscription-slide-1">
+        <div class="carousel-arrow-box">
+
+          <a href="#carousel-subscription-slide-3">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+
+        </div>
+
+        <div class="carousel-image-box">
+          <a href="#subscription-plans">
+            <img src="images/flowers/fall.jpg" alt="Vinter – Julstjärnor, Amaryllis & Hyacinter" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-text-box">
+          <h1>Säsongens favoriter till din dörr</h1>
+          <p>Prova våra prenumerationsbaserade blommor. Du behöver inte fundera på vilka blommor som ska planteras under
+            olika säsonger - vi har redan tänkt på det!</p>
+          <a href="#subscription-plans" class="call-to-action">Prenumerera nu</a>
+
+          <div class="carousel-indicator">
+            <p><strong>_ </strong>_ _</p>
+          </div>
+        </div>
+        <div class="carousel-arrow-box">
+          <a href="#carousel-subscription-slide-2">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item-box" id="carousel-subscription-slide-2">
+        <div class="carousel-arrow-box">
+          <a href="#carousel-subscription-slide-1">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-image-box">
+          <a href="#subscription-plans">
+            <img src="images/flowers/winter.jpg" alt="Tulpaner, Påskliljor & Krokus" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-text-box">
+          <h1>Vinter med Julstjärnor, Amaryllis & Hyacinter!</h1>
+          <p>Under de mörkare månaderna låter vi hemmet glöda av värme och stämning. Med julstjärnans klassiska elegans,
+            amaryllens ståtlighet och hyacinternas ljuva doft skapar vi arrangemang som gör vintern mjuk, varm och
+            stämningsfull.</p>
+          <p><strong>Beställ innan 4 December</strong><br><strong>Leverans från och med 2025-12-10.</strong></p>
+          <a href="subscription.html" class="call-to-action">Prenumerera nu</a>
+          <div class="carousel-indicator">
+            <p>_ <strong>_</strong> _</p>
+          </div>
+        </div>
+        <div class="carousel-arrow-box">
+          <a href="#carousel-subscription-slide-3">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item-box" id="carousel-subscription-slide-3">
+        <div class="carousel-arrow-box">
+          <a href="#carousel-subscription-slide-2">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+
+        <div class="carousel-image-box">
+          <a href="#subscription-plans">
+            <img src="images/flowers/spring.jpg" alt="Ljung, Krysantemum & Höstastrar" loading="lazy">
+          </a>
+        </div>
+
+        <div class="carousel-text-box">
+          <h1>Vår med Tulpaner, Påskliljor & Krokus</h1>
+          <p>När ljuset återvänder fyller vi hemmet med färg och liv. Tulpanernas friska elegans, påskliljornas ljusa
+            energi och krokusens första små vårleenden blir en vacker påminnelse om att allt börjar om igen.</p>
+          <p><strong>Leverans sker någon gång i slutet på Mars.</strong></p>
+          <a href="about.html" class="call-to-action">Prenumerera nu</a>
+          <div class="carousel-indicator">
+            <p>_ _ <strong>_</strong></p>
+          </div>
+        </div>
+
+        <div class="carousel-arrow-box">
+          <a href="#carousel-subscription-slide-1">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-image">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/flower2.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/flower3.svg" alt="piktogram av blomma" loading="lazy">
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="products" id="subscription-plans"> <!-- Köpområde för prenumerationenrna-->
+
+      <article class="card">
+        <div class="media">
+          <a href="/products/bigfarmer.html">
+            <img src="images/flowers/bigfarmer.jpg" alt="Produktlåda Big Farmer">
+          </a>
+        </div>
+        <a href="/products/bigfarmer.html">
+          <h3 class="title">Storodlarn'</h3>
+        </a>
+        <p class="desc">
+          3 Blomstersorter <br>
+          6 Blommor per sort <br>
+          4 gånger per år.</p>
+        <div class="bottom-row">
+          <div class="price">499 kr/kvartal</div>
+          <a class="primary add-btn" href="cart.html#storodlarn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+
+      <article class="card">
+        <div class="media">
+          <a href="/products/greenfingers.html">
+            <img src="images/flowers/greenfingers.jpg" alt="Produktlåda Gröna Fingrar" loading="lazy">
+          </a>
+        </div>
+        <a href="/products/greenfingers.html">
+          <h3 class="title">Gröna fingrar</h3>
+        </a>
+        <p class="desc">
+          3 Blomstersorter <br>
+          2 Blommor per sort <br>
+          4 gånger per år.</p>
+        <div class="bottom-row">
+          <div class="price">299 kr/kvartal</div>
+          <a class="primary add-btn" href="cart.html#gronafingrar">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="media">
+          <a href="products/introbox.html">
+            <img src="images/flowers/introbox.jpg" alt="Rosa Ljung" loading="lazy">
+          </a>
+        </div>
+        <a href="products/introbox.html">
+          <h3 class="title">Introlådan</h3>
+        </a>
+        <p class="desc">3 Blomstersorter <br>
+          2 Blommor per sort <br>
+        </p>
+        <div class="bottom-row">
+          <div class="price">299 kr</div>
+          <a class="primary add-btn" href="cart.html#introladan">Lägg i varukorg</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-image">
+        <img src="images/pictogram/flower2.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/flower3.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="column-content"> <!-- FAQ för prenumerationerna-->
+      <div class="column-box">
+        <div class="column-text-box-left">
+          <h2>Frakt</h2>
+          <p>Vi leverar hem till din dörr. Frakten ingår i prenumerationspriset. Du medeleas dagen innan leverans.</p>
+        </div>
+      </div>
+
+      <div class="column-box">
+        <div class="column-text-box-left">
+          <h2>Betalning</h2>
+          <p>Betalning sker i förväg den första januari, april, juli och oktober samt vid tecknande av
+            prenumerationstjänsten. </p>
+        </div>
+      </div>
+
+      <div class="column-box">
+        <div class="column-text-box-left">
+          <h2>Förändring och uppsägning</h2>
+          <p>Vi reserverar oss för förändrat utbud av blommor på grund av yttere omstänidheter. Uppsägning sker för
+            kommande kvartal, det vill säga säger du upp i februari får du fortfarande blommor för det andra kvartalet
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <!--Vänstra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Information </h4>
+          <p>Blomgatan 7, Malmö.<br>
+            555 - 90 80 70<br>
+            kontakt@floriaflowers.com</p>
+          <p class="italic-footer1">Öppetider:</p>
+          <p>Vardagar 10 - 17<br>
+            Helger 11-16</p>
+        </div>
+
+        <!--Mellersta kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Floria Flowers </h4>
+          <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+          <ul>
+            <li>
+              <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+              <ul>
+                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+        </div>
+
+        <!--Högra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles">Information om ditt köp</h4>
+          <a href="fakelink.html">Köp- och leveransvillkor</a>
+          <a href="fakelink.html">Hemleverans information</a>
+          <a href="fakelink.html">Retur och reklamation</a>
+          <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+        </div>
+      </div>
+
+      <p class="copyright">© Copyright Floria Flowers 2025</p>
+    </div>
+  </footer>
+  <!--Footer slut-->
+
+  <!-- JavaSript var det enda sättet jag fick karusellen att funka - Byt ut "test" i "carousel-test-slide-"" i script, HTML och CSS för att kopiera karusell /AA-->
+  <script>
+    function carouselupdate() {
+      // Funktionens namn 
+
+      const hash = window.location.hash.slice(1);
+      // Hämtar användbar änk till respektive sida i karusellen tex. carousel-test-slide-2
+
+      const slides = document.querySelectorAll('.carousel-item-box');
+      // Väljer HTML element med klassen carousel-item-box och sparar i variablen "slides"
+
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+      // Går igenom varje slide och sätter display till none (döljer dem)
+
+      if (hash.startsWith('carousel-subscription-slide-')) {
+        // Kollar om länken börjar med carousel-test-slide- dvs kollar om knapp klickats på)
+        const activeSlide = document.getElementById(hash);
+        // Hämtar sidan esom matchar länken och sparar i variablen "activeSlide"
+        if (activeSlide) {
+          activeSlide.style.display = 'inline-flex';
+          // Sätter "rätt" sida till display inline-flex (visar den)
+        }
+      } else {
+        document.getElementById('carousel-subscription-slide-1').style.display = 'inline-flex';
+        // Sätter första sidan som standard om ingen knapp klickats på
+      }
+    }
+
+    window.addEventListener('hashchange', carouselupdate);
+    // Kör funktionen när knapp klickas på
+    carouselupdate();
+    // Kör funktionen när sidan laddas
+  </script>
+</body>
+
+</html>

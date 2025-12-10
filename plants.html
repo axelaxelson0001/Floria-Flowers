@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <title>Växter | Floria Flowers</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Floria Flowers">
+  <meta name="description"
+    content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+</head>
+
+<body id="start">
+  <!--HEADER-->
+  <header class="header">
+    <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+        <!--Loggotyp och länk till startsidan-->
+      </div>
+      <div class="search-box"> <!--Sökruta (placeholder)-->
+        <form>
+          <input type="search" placeholder="Sök efter växter, blommor och fröer">
+          <button type="submit"><img class="icon" src="images/search.svg"
+              alt="Sökikon i form av ett förstoringsglas"></button>
+        </form>
+      </div>
+      <div class="icon-box">
+        <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+        <!--Länk till användarens sida-->
+        <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+        <!--Länk till användarens kundvagn-->
+      </div>
+    </nav>
+    <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+      <ul>
+        <li><a href="campaign.html">Kampanj</a></li>
+        <li><a href="flowers.html">Blommor</a></li>
+        <li><a href="seeds.html">Fröer</a></li>
+        <li><a href="plants.html" class="current-page">Växter</a></li>
+        <li><a href="subscription.html">Prenumeration</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+      <a href="campaign.html">
+        <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+      </a>
+    </nav>
+  </header>
+
+
+
+  <!-- PRODUKTGRID - CSS Grid med 3 kolumner 
+         Visar 6 produkter i 2 rader (3×2 layout)
+         Varje produkt är en .card med följande delar:
+         - .media: Cirkelformat bildområde (140×140px med gradient-bakgrund)
+         - .title: Produktnamn + latinskt namn (span lang="la")
+         - .desc: Kort beskrivning (t.ex. "Rosa tulpaner, 10-pack")
+         - .bottom-row: Pris + "Lägg i varukorg"-knapp
+         
+         VARUKORG-LÄNK: Varje "Lägg i varukorg"-knapp länkar till cart.html#<produkt-id>
+         där <produkt-id> motsvarar produktens id i cart.html (t.ex. cart.html#tulpan) 
+    -->
+
+  <main class="plants">
+    <section class="intro">
+      <!-- Rubrik för Växter -->
+      <h1>Växter</h1>
+      <!-- Introtext för Växter -->
+      <p><strong>Utforska vår gröna värld – alla växter på ett ställe!</strong></p>
+      <p>Varje växt är noggrant utvald för sin kvalitet, sitt utseende och sin förmåga att trivas i hemmiljö. Låt dig
+        inspireras, jämför olika sorter och hitta dina nya gröna favoriter.</p>
+      <p>Svårt att välja? Se vår säsongsbaserade prenumerationstjänst <!-- Länk till prenumerations sida --> <a
+          href="subscription.html">HÄR</a></p>
+    </section>
+
+    <div class="divider">
+      <!--Viseullt element för uppdelning av sidan-->
+      <div class="divider-line"></div>
+      <div class="divider-image">
+        <img src="images/pictogram/plant1.svg" alt="piktogram av växt" loading="lazy">
+        <img src="images/pictogram/plant1.svg" alt="piktogram av växt" loading="lazy">
+        <img src="images/pictogram/plant1.svg" alt="piktogram av växt" loading="lazy">
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!--Produkterna: bild, rubrik, förklarande text samt pris och köp knapp-->
+    <div class="products" id="products">
+      <!-- PRODUKT 1: MONSTERA (Monstera deliciosa) -->
+      <article class="card">
+        <!-- Cirkelformat bildområde - höjd/bredd 140×140px -->
+        <div class="media">
+          <a href="products/monstera.html">
+            <img src="images/flowers/monstera.jpg" alt="Gröna Monstera" loading="lazy">
+          </a>
+        </div>
+        <!-- Produkttitel: Svenskt namn + Latin-namn -->
+        <a href="products/monstera.html">
+          <h3 class="title">Monstera (<span lang="la">Monstera deliciosa</span>)</h3>
+        </a>
+        <!-- Kort beskrivning av produkten -->
+        <p class="desc">Grön Monstera</p>
+        <!-- Prisrad: pris + knapp -->
+        <div class="bottom-row">
+          <div class="price">119 kr</div>
+          <!-- VARUKORG-LÄNK: Klick → cart.html#monstera (visar endast Monstera-produkten) -->
+          <a href="cart.html#monstera" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 2: AMPELLILJA (Chlorophytum comosum) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/spider-plant.html">
+            <img src="images/flowers/spider-plant.jpg" alt="Grön Ampellilja" loading="lazy">
+          </a>
+        </div>
+        <a href="products/spider-plant.html">
+          <h3 class="title">Ampellilja (<span lang="la">Chlorophytum comosum</span>) </h3>
+        </a>
+        <p class="desc">Grön Ampellilja</p>
+        <div class="bottom-row">
+          <div class="price">99 kr</div>
+          <a href="cart.html#ampellilja" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 3: FIOLFIKUS (Ficus lyrata) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/ficus.html">
+            <img src="images/flowers/ficus.jpg" alt="Grön Fiolfikus" loading="lazy">
+          </a>
+        </div>
+        <a href="products/ficus.html">
+          <h3 class="title">Fiolfikus (<span lang="la">Ficus lyrata</span>) </h3>
+        </a>
+        <p class="desc">Grön Fiolfikus</p>
+        <div class="bottom-row">
+          <div class="price">129 kr</div>
+          <a href="cart.html#fiolfikus" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 4: MURGRÖNA (Hedera helix) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/ivy.html">
+            <img src="images/flowers/ivy.jpg" alt="Grön Murgröna" loading="lazy">
+          </a>
+        </div>
+        <a href="products/ivy.html">
+          <h3 class="title">Murgröna (<span lang="la">Hedera helix</span>) </h3>
+        </a>
+        <p class="desc">Grön Murgröna</p>
+        <div class="bottom-row">
+          <div class="price">Kampanj 119 kr</div>
+          <a href="cart.html#murgrona" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 5: GULLRANKA (Epipremnum aureum) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/pothos.html">
+            <img src="images/flowers/pothos.jpg" alt="Grön Gullranka" loading="lazy">
+          </a>
+        </div>
+        <a href="products/pothos.html">
+          <h3 class="title">Gullranka (<span lang="la">Epipremnum aureum</span>)</h3>
+        </a>
+        <p class="desc">Grön Gullranka</p>
+        <div class="bottom-row">
+          <div class="price">129 kr</div>
+          <a href="cart.html#gullranka" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 6: KLÄTTERKALLA (Scindapsus pictus) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/philodendron.html">
+            <img src="images/flowers/philodendron.jpg" alt="Grön Klätterkalla" loading="lazy">
+          </a>
+        </div>
+        <a href="products/philodendron.html">
+          <h3 class="title">Klätterkalla (<span lang="la">Scindapsus pictus</span>)</h3>
+        </a>
+        <p class="desc">Grön Klätterkalla</p>
+        <div class="bottom-row">
+          <div class="price">119 kr</div>
+          <a href="cart.html#klatterkalla" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <!--Vänstra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Information </h4>
+          <p>Blomgatan 7, Malmö.<br>
+            555 - 90 80 70<br>
+            kontakt@floriaflowers.com</p>
+          <p class="italic-footer1">Öppetider:</p>
+          <p>Vardagar 10 - 17<br>
+            Helger 11-16</p>
+        </div>
+
+        <!--Mellersta kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Floria Flowers </h4>
+          <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+          <ul>
+            <li>
+              <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+              <ul>
+                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+        </div>
+
+        <!--Högra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles">Information om ditt köp</h4>
+          <a href="fakelink.html">Köp- och leveransvillkor</a>
+          <a href="fakelink.html">Hemleverans information</a>
+          <a href="fakelink.html">Retur och reklamation</a>
+          <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+        </div>
+      </div>
+
+      <p class="copyright">© Copyright Floria Flowers 2025</p>
+    </div>
+  </footer>
+  <!--Footer slut-->
+
+</body>
+
+</html>

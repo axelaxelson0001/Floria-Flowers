@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <title>Kundvagn | Floria Flowers</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Floria Flowers">
+  <meta name="description"
+    content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+</head>
+
+<body id="start">
+  <!--HEADER-->
+  <header class="header">
+    <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+        <!--Loggotyp och länk till startsidan-->
+      </div>
+      <div class="search-box"> <!--Sökruta (placeholder)-->
+        <form>
+          <input type="search" placeholder="Sök efter växter, blommor och fröer">
+          <button type="submit"><img class="icon" src="images/search.svg"
+              alt="Sökikon i form av ett förstoringsglas"></button>
+        </form>
+      </div>
+      <div class="icon-box">
+        <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+        <!--Länk till användarens sida-->
+        <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+        <!--Länk till användarens kundvagn-->
+      </div>
+    </nav>
+    <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+      <ul>
+        <li><a href="campaign.html">Kampanj</a></li>
+        <li><a href="flowers.html">Blommor</a></li>
+        <li><a href="seeds.html">Fröer</a></li>
+        <li><a href="plants.html">Växter</a></li>
+        <li><a href="subscription.html">Prenumeration</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+      <a href="campaign.html">
+        <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- HUR VARUKORGEN FUNGERAR:
+    1. Användaren klickar "Lägg i varukorg" för en produkt 
+    2. Det länkas till cart.html#tulpan (eller #pion, #ljung, etc.)
+    3. cart.html laddar och CSS-selektorn .cart-item:target gör att endast
+       artikeln med id="tulpan" visas (display: flex)
+    4. Övriga .cart-item-artiklar förblir dolda (display: none)
+    5. Tom-korg-meddelandet gömmer sig när en produkt visas -->
+
+  <main class="cart-page">
+    <section class="cart">
+      <h1>Din varukorg</h1>
+
+      <!-- VARUKORG-PRODUKTER 
+           
+           Varje produkt är en <article id="..." class="cart-item"> som är dold 
+           som standard (display: none). När URL-fragmentet matchar produktens id
+           (t.ex. cart.html#tulpan) blir den produkten synlig via CSS:
+           .cart-item:target { display: flex; }
+           
+      -->
+
+      <!-- PRODUKT 1: TULPANER -->
+      <article id="tulpan" class="cart-item">
+        <!-- Mindre bildruta för varukorg (84×84px) -->
+        <div class="media small">
+          <img src="images/flowers/tulip.jpg" alt="Rosa tulpaner">
+        </div>
+        <!-- Produktinformation -->
+        <div class="item-info">
+          <h3>Tulpaner (<span lang="la">Tulipa gesneriana</span>)</h3>
+          <p>Rosa tulpaner, 10-pack — <strong>89 kr</strong></p>
+          <!-- Köp-länk: Klick → confirm-page.html#tulpan (visar köpbekräftelse) -->
+          <p><a href="confirm-page.html#tulpan" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+      <!-- PRODUKT 2: PION -->
+      <article id="pion" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/peony.jpg" alt="Rosa pion">
+        </div>
+        <div class="item-info">
+          <h3>Pion (<span lang="la">Paeonia lactiflora</span>)</h3>
+          <p>Rosa pion, bukett — <strong>99 kr</strong></p>
+          <p><a href="confirm-page.html#pion" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+      <!-- PRODUKT 3: LJUNG -->
+      <article id="ljung" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/heather.jpg" alt="Rosa Ljung">
+        </div>
+        <div class="item-info">
+          <h3>Ljung (<span lang="la">Calluna vulgaris</span>)</h3>
+          <p>Rosa Ljung — <strong>Kampanj 69 kr</strong></p>
+          <p><a href="confirm-page.html#ljung" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+      <!-- PRODUKT 4: ROSOR -->
+      <article id="rosor" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/rose.jpg" alt="Rosa Rosor">
+        </div>
+        <div class="item-info">
+          <h3>Rosor (<span lang="la">Rosa spp.</span>)</h3>
+          <p>Rosa Rosor, 10-pack — <strong>119 kr</strong></p>
+          <p><a href="confirm-page.html#rosor" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+      <!-- PRODUKT 5: JULSTJÄRNA -->
+      <article id="julstjarna" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/poinsettia.jpg" alt="Röd Julstjärna">
+        </div>
+        <div class="item-info">
+          <h3>Julstjärna (<span lang="la">Euphorbia pulcherrima</span>)</h3>
+          <p>Röd Julstjärna — <strong>Kampanj 69 kr</strong></p>
+          <p><a href="confirm-page.html#julstjarna" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+      <!-- PRODUKT 6: SOLROS -->
+      <article id="solros" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/sunflower.jpg" alt="Gul Solros">
+        </div>
+        <div class="item-info">
+          <h3>Solros (<span lang="la">Helianthus annuus</span>)</h3>
+          <p>Gul Solros — <strong>99 kr</strong></p>
+          <p><a href="confirm-page.html#solros" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 7: MONSTERA -->
+      <article id="monstera" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/monstera.jpg" alt="Grön Monstera">
+        </div>
+        <div class="item-info">
+          <h3>Monstera (<span lang="la">Monstera deliciosa</span>)</h3>
+          <p>Grön Monstera — <strong>119 kr</strong></p>
+          <p><a href="confirm-page.html#monstera" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 8: AMPELLILJA -->
+      <article id="ampellilja" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/spider-plant.jpg" alt="Grön Ampellilja">
+        </div>
+        <div class="item-info">
+          <h3>Ampellilja (<span lang="la">Chlorophytum comosum</span>)</h3>
+          <p>Grön Ampellilja — <strong>99 kr</strong></p>
+          <p><a href="confirm-page.html#ampellilja" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 9: FIOLFIKUS -->
+      <article id="fiolfikus" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/ficus.jpg" alt="Grön Fiolfikus">
+        </div>
+        <div class="item-info">
+          <h3>Fiolfikus (<span lang="la">Ficus lyrata</span>)</h3>
+          <p>Grön Fiolfikus — <strong>129 kr</strong></p>
+          <p><a href="confirm-page.html#fiolfikus" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 10: MURGRÖNA -->
+      <article id="murgrona" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/ivy.jpg" alt="Grön Murgröna">
+        </div>
+        <div class="item-info">
+          <h3>Murgröna (<span lang="la">Hedera helix</span>)</h3>
+          <p>Grön Murgröna — <strong>Kampanj 119 kr</strong></p>
+          <p><a href="confirm-page.html#murgrona" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 11: GULLRANKA -->
+      <article id="gullranka" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/pothos.jpg" alt="Grön Gullranka">
+        </div>
+        <div class="item-info">
+          <h3>Gullranka (<span lang="la">Epipremnum aureum</span>)</h3>
+          <p>Grön Gullranka — <strong>129 kr</strong></p>
+          <p><a href="confirm-page.html#gullranka" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 12: KLÄTTERKALLA -->
+      <article id="klatterkalla" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/philodendron.jpg" alt="Grön Klätterkalla">
+        </div>
+        <div class="item-info">
+          <h3>Klätterkalla (<span lang="la">Scindapsus pictus</span>)</h3>
+          <p>Grön Klätterkalla — <strong>119 kr</strong></p>
+          <p><a href="confirm-page.html#klatterkalla" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 13: BASILIKA -->
+      <article id="basilika" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/basil.jpg" alt="Basilika">
+        </div>
+        <div class="item-info">
+          <h3>Basilika (<span lang="la">Ocimum basilicum</span>)</h3>
+          <p>Basilika fröpåse — <strong>49 kr</strong></p>
+          <p><a href="confirm-page.html#basilika" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 14: BLADPERSILJA -->
+      <article id="bladpersilja" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/parsley.jpg" alt="Persilja">
+        </div>
+        <div class="item-info">
+          <h3>Bladpersilja (<span lang="la">Petroselinum crispum</span>)</h3>
+          <p>Bladpersilja fröpåse — <strong>49 kr</strong></p>
+          <p><a href="confirm-page.html#bladpersilja" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 15: DILL -->
+      <article id="dill" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers//dill.jpg" alt="Dill">
+        </div>
+        <div class="item-info">
+          <h3>Dill (<span lang="la">Anethum graveolens</span>)</h3>
+          <p>Dill fröpåse — <strong>39 kr</strong></p>
+          <p><a href="confirm-page.html#dill" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 16: GURKA -->
+      <article id="gurka" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/cucumber.jpg" alt="Gurka">
+        </div>
+        <div class="item-info">
+          <h3>Gurka (<span lang="la">Cucumis sativus</span>)</h3>
+          <p>Gurka fröpåse — <strong>39 kr</strong></p>
+          <p><a href="confirm-page.html#gurka" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 17: MOROT -->
+      <article id="morot" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/carrot.jpg" alt="Morot">
+        </div>
+        <div class="item-info">
+          <h3>Morot (<span lang="la">Daucus carota</span>)</h3>
+          <p>Morot fröpåse — <strong>49 kr</strong></p>
+          <p><a href="confirm-page.html#morot" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 18: KÖRSBÄRSTOMAT -->
+      <article id="korsbarstomat" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/tomato.jpg" alt="Körsbärstomat">
+        </div>
+        <div class="item-info">
+          <h3>Körsbärstomat (<span lang="la">Solanum lycopersicum var. cerasiforme</span>)</h3>
+          <p>Körsbärstomat fröpåse — <strong>49 kr</strong></p>
+          <p><a href="confirm-page.html#korsbarstomat" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 19: STORODLARN -->
+      <article id="storodlarn" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/bigfarmer.jpg" alt="Storodlarn’ prenumeration">
+        </div>
+        <div class="item-info">
+          <h3>Storodlarn’</h3>
+          <p>Prenumerationstjänst— <strong>499 kr/kvartal</strong></p>
+          <p><a href="confirm-page.html#storodlarn" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 20: GRÖNA FINGRAR -->
+      <article id="gronafingrar" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/greenfingers.jpg" alt="Gröna fingrar prenumeration">
+        </div>
+        <div class="item-info">
+          <h3>Gröna fingrar</h3>
+          <p>Prenumerationstjänst— <strong>299 kr/kvartal</strong></p>
+          <p><a href="confirm-page.html#gronafingrar" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 21: INTROLÅDAN -->
+      <article id="introladan" class="cart-item">
+        <div class="media small">
+          <img src="images/flowers/introbox.jpg" alt="Introlådan prenumeration">
+        </div>
+        <div class="item-info">
+          <h3>Introlådan</h3>
+          <p>Prenumerationstjänst— <strong>299 kr</strong></p>
+          <p><a href="confirm-page.html#introladan" class="primary buy-btn">Köp</a></p>
+        </div>
+      </article>
+
+
+
+
+
+      <!-- TOM-KORG-MEDDELANDE
+           
+           Denna text visas när cart.html öppnas UTAN fragment (dvs. bara cart.html).
+           Den döljs automatiskt när en .cart-item är :target via CSS:
+           .cart-item:target ~ .empty-message { display: none; }
+        -->
+      <p class="empty-message">Din varukorg är tom. Klicka på "Lägg i varukorg" på en produkt för att lägga till den.
+      </p>
+
+    </section>
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <!--Vänstra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Information </h4>
+          <p>Blomgatan 7, Malmö.<br>
+            555 - 90 80 70<br>
+            kontakt@floriaflowers.com</p>
+          <p class="italic-footer1">Öppetider:</p>
+          <p>Vardagar 10 - 17<br>
+            Helger 11-16</p>
+        </div>
+
+        <!--Mellersta kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Floria Flowers </h4>
+          <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+          <ul>
+            <li>
+              <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+              <ul>
+                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+        </div>
+
+        <!--Högra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles">Information om ditt köp</h4>
+          <a href="fakelink.html">Köp- och leveransvillkor</a>
+          <a href="fakelink.html">Hemleverans information</a>
+          <a href="fakelink.html">Retur och reklamation</a>
+          <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+        </div>
+      </div>
+
+      <p class="copyright">© Copyright Floria Flowers 2025</p>
+    </div>
+  </footer>
+  <!--Footer slut-->
+
+</body>
+
+</html>

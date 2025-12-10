@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <title>Kampanj | Floria Flowers</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Floria Flowers">
+  <meta name="description"
+    content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+</head>
+
+<body id="start">
+  <!--HEADER-->
+  <header class="header">
+    <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+        <!--Loggotyp och länk till startsidan-->
+      </div>
+      <div class="search-box"> <!--Sökruta (placeholder)-->
+        <form>
+          <input type="search" placeholder="Sök efter växter, blommor och fröer">
+          <button type="submit"><img class="icon" src="images/search.svg"
+              alt="Sökikon i form av ett förstoringsglas"></button>
+        </form>
+      </div>
+      <div class="icon-box">
+        <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+        <!--Länk till användarens sida-->
+        <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+        <!--Länk till användarens kundvagn-->
+      </div>
+    </nav>
+    <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+      <ul>
+        <li><a href="campaign.html" class="current-page">Kampanj</a></li>
+        <li><a href="flowers.html">Blommor</a></li>
+        <li><a href="seeds.html">Fröer</a></li>
+        <li><a href="plants.html">Växter</a></li>
+        <li><a href="subscription.html">Prenumeration</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+      <a href="campaign.html">
+        <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+      </a>
+    </nav>
+  </header>
+
+
+  <main class="campaign" id="campaign">
+    <section class="intro">
+      <!-- Rubrik för kampanjsidan -->
+      <h1>Kampanjer</h1>
+      <!-- Introduktionstext för kampanjsidan -->
+      <p><strong>Välkommen till vår stora blomkampanj!</strong></p>
+      <p>Här hittar du säsongens vackraste blommor – till riktigt bra priser. Under en begränsad tid erbjuder vi
+        exklusiva kampanjer och utvalda favoriter som förgyller både hemmet och vardagen.</p>
+      <p>Passa på att fylla vasen, överraska någon du tycker om eller fräscha upp hemmet med färska blommor till
+        kampanjpris. Våra erbjudanden uppdateras löpande, så missa inte chansen att fynda dina favoriter!</p>
+    </section>
+
+    <!--Bildkarusell-->
+    <div class="carousel"> <!-- Tillhörande JavaScript finns under "script"-->
+
+      <div class="carousel-item-box" id="carousel-test-slide-1">
+        <div class="carousel-arrow-box">
+
+          <a href="#carousel-test-slide-3">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+
+        </div>
+
+        <div class="carousel-image-box">
+          <a href="products/poinsettia.html">
+            <img src="images/flowers/poinsettia.jpg" alt="Bild på Röd julstjärna" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-text-box">
+          <!--Rubrik för bildkarusell-->
+          <h1>Röd glöd för julens stämning.</h1>
+          <!-- text för bildkarusell -->
+          <p><strong>Just nu:</strong> Julstjärna 69 kr</p>
+          <!--Länk till produktsida genom knapp-->
+          <a href="products/poinsettia.html" class="call-to-action">Köp din Julstjärna här</a>
+          <div class="carousel-indicator">
+
+            <p><strong>_ </strong>_ _</p>
+          </div>
+        </div>
+        <div class="carousel-arrow-box">
+          <a href="#carousel-test-slide-2">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item-box" id="carousel-test-slide-2">
+        <div class="carousel-arrow-box">
+          <a href="#carousel-test-slide-1">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-image-box">
+          <a href="products/heather.html">
+            <img src="images/flowers/heather.jpg" alt="Bild på Ljung" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-text-box">
+          <!-- Rubrik för bildkarusell-->
+          <h1>Skapa julkänsla med ljung</h1>
+          <!-- Text för bildkarusell-->
+          <p><strong>Just nu:</strong> Ljung 69 kr</p>
+          <!--Länk till produktsida genom knapp-->
+          <a href="products/heather.html" class="call-to-action">Köp Ljung här</a>
+          <div class="carousel-indicator">
+            <p>_ <strong>_</strong> _</p>
+          </div>
+        </div>
+        <div class="carousel-arrow-box">
+          <a href="#carousel-test-slide-3">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item-box" id="carousel-test-slide-3">
+        <div class="carousel-arrow-box">
+          <a href="#carousel-test-slide-2">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+
+        <div class="carousel-image-box">
+          <a href="products/ivy.html">
+            <img src="images/flowers/ivy.jpg" alt="Bild på Murgröna" loading="lazy">
+          </a>
+        </div>
+
+        <div class="carousel-text-box">
+          <!-- Rubrik för bildkarusell-->
+          <h1>Grönt som håller hela vintern – murgrönan klarar kylan.</h1>
+          <!-- Text för bildkarusell-->
+          <p><strong>Just nu:</strong> Murgröna 119 kr</p>
+          <!--Länk till produktsida-->
+          <a href="products/ivy.html" class="call-to-action">Köp din Murgröna här</a>
+          <div class="carousel-indicator">
+            <p>_ _ <strong>_</strong></p>
+          </div>
+        </div>
+
+        <div class="carousel-arrow-box">
+          <a href="#carousel-test-slide-1">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-image">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/plant1.svg" alt="piktogram av växt" loading="lazy">
+        <img src="images/pictogram/seeds1.svg" alt="piktogram av fröpåse" loading="lazy">
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!-- Produktkort, likadant som på sidan om Blommor-->
+    <div class="products">
+      <article class="card">
+        <div class="media">
+          <img src="images/flowers/heather.jpg" alt="Rosa Ljung">
+        </div>
+        <a href="products/heather.html">
+          <h3 class="title">Ljung (<span lang="la">Calluna vulgaris</span>)</h3>
+        </a>
+        <p class="desc">Rosa Ljung</p>
+        <div class="bottom-row">
+          <div class="price">Kampanj 69 kr</div>
+          <a class="primary add-btn" href="cart.html#ljung">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- Produktkort, likadant som på sidan om Blommor -->
+      <article class="card">
+        <div class="media">
+          <img src="images/flowers/poinsettia.jpg" alt="Röd Julstjärna">
+        </div>
+        <a href="products/poinsettia.html">
+          <h3 class="title">Julstjärna (<span lang="la">Euphorbia pulcherrima</span>)</h3>
+        </a>
+        <p class="desc">Röd Julstjärna</p>
+        <div class="bottom-row">
+          <div class="price">Kampanj 69 kr</div>
+          <a href="cart.html#julstjarna" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- Produktkort, likadant som på sidan om Växter -->
+      <article class="card">
+        <div class="media">
+          <img src="images/flowers/ivy.jpg" alt="Grön Murgröna" loading="lazy">
+        </div>
+        <a href="products/ivy.html">
+          <h3 class="title">Murgröna (<span lang="la">Hedera helix</span>) </h3>
+        </a>
+        <p class="desc">Grön Murgröna</p>
+        <div class="bottom-row">
+          <div class="price">Kampanj 119 kr</div>
+          <a href="cart.html#murgrona" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+    </div>
+
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <!--Vänstra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Information </h4>
+          <p>Blomgatan 7, Malmö.<br>
+            555 - 90 80 70<br>
+            kontakt@floriaflowers.com</p>
+          <p class="italic-footer1">Öppetider:</p>
+          <p>Vardagar 10 - 17<br>
+            Helger 11-16</p>
+        </div>
+
+        <!--Mellersta kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Floria Flowers </h4>
+          <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+          <ul>
+            <li>
+              <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+              <ul>
+                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+        </div>
+
+        <!--Högra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles">Information om ditt köp</h4>
+          <a href="fakelink.html">Köp- och leveransvillkor</a>
+          <a href="fakelink.html">Hemleverans information</a>
+          <a href="fakelink.html">Retur och reklamation</a>
+          <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+        </div>
+      </div>
+
+      <p class="copyright">© Copyright Floria Flowers 2025</p>
+    </div>
+  </footer>
+  <!--Footer slut-->
+
+  <!-- JavaSript var det enda sättet jag fick karusellen att funka - Byt ut "test" i "carousel-test-slide-"" i script, HTML och CSS för att kopiera karusell /AA-->
+  <script>
+    function carouselupdate() {
+      // Funktionens namn 
+
+      const hash = window.location.hash.slice(1);
+      // Hämtar användbar änk till respektive sida i karusellen tex. carousel-test-slide-2
+
+      const slides = document.querySelectorAll('.carousel-item-box');
+      // Väljer HTML element med klassen carousel-item-box och sparar i variablen "slides"
+
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+      // Går igenom varje slide och sätter display till none (döljer dem)
+
+      if (hash.startsWith('carousel-test-slide-')) {
+        // Kollar om länken börjar med carousel-test-slide- dvs kollar om knapp klickats på)
+        const activeSlide = document.getElementById(hash);
+        // Hämtar sidan esom matchar länken och sparar i variablen "activeSlide"
+        if (activeSlide) {
+          activeSlide.style.display = 'inline-flex';
+          // Sätter "rätt" sida till display inline-flex (visar den)
+        }
+      } else {
+        document.getElementById('carousel-test-slide-1').style.display = 'inline-flex';
+        // Sätter första sidan som standard om ingen knapp klickats på
+      }
+    }
+
+    window.addEventListener('hashchange', carouselupdate);
+    // Kör funktionen när knapp klickas på
+    carouselupdate();
+    // Kör funktionen när sidan laddas
+  </script>
+</body>
+
+</html>

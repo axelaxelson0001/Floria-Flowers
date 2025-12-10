@@ -1,17 +1,350 @@
 <!DOCTYPE html>
-<html lang="sv">
+<html lang="sv"><!--Berättar att sidans huvudsakliga språk är svenska, viktigt för både tillgänglighet och sökmotorer-->
 
 <head>
-  <title>Floria Flowers</title>
-  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
-  <link href="css/style.css" rel="stylesheet">
-  <meta charset="UTF-8">
+  <title>Floria Flowers</title> <!--Anger sidans titel i webbläsaren, används av sökmotorer som rubrik-->
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico"> <!--Ikon som syns i webbläsaren-->
+  <link href="css/style.css" rel="stylesheet"><!-- läser in designen för sidan.-->
+  <meta charset="UTF-8"><!--säkerställer att svenska tecken fungerar rätt-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="Floria Flowers">
+  <!-- sidans bredd ska följa enhetens skärmbredd, sidan zoomas inte in eller ut initialt.-->
+  <meta name="author" content="Floria Flowers"><!-- Upphovsansvarig, användbart för Sökmotorer. -->
   <meta name="description"
     content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+  <!-- Anger sidans innehåll, användbart för aökmotorer-->
 </head>
-<main>
-</main>
+
+<body id="start"><!--Taggning för scroll tillbaka till toppen av sidan-->
+
+  <!--HEADER-->
+  <header class="header">
+    <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+        <!--Loggotyp och länk till startsidan-->
+      </div>
+      <div class="search-box"> <!--Sökruta (placeholder)-->
+        <form>
+          <input type="search" placeholder="Sök efter växter, blommor och fröer">
+          <button type="submit"><img class="icon" src="images/search.svg"
+              alt="Sökikon i form av ett förstoringsglas"></button>
+        </form>
+      </div>
+      <div class="icon-box">
+        <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+        <!--Länk till användarens sida-->
+        <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+        <!--Länk till användarens kundvagn-->
+      </div>
+    </nav>
+    <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+      <ul>
+        <li><a href="campaign.html">Kampanj</a></li>
+        <li><a href="flowers.html">Blommor</a></li>
+        <li><a href="seeds.html">Fröer</a></li>
+        <li><a href="plants.html">Växter</a></li>
+        <li><a href="subscription.html">Prenumeration</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+      <a href="campaign.html">
+        <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="carousel">
+      <!-- Bildkarusell--><!-- Vi fick inte karusell att fungera bra med endast CSS, kod för javaScript finns under "script"-->
+      <div class="carousel-item-box" id="carousel-start-slide-1"> <!-- Sida 1 i karusellen-->
+        <div class="carousel-arrow-box"><!--Vänsterpil-->
+          <a href="#carousel-start-slide-3"><!--Hoppar till sida 3 i karusellen, detta ankare avänds av javascript-->
+            <img src="images/chevron-left.svg" alt="Vänsterpil för att bläddra i karusellen"
+              loading="lazy"><!-- Loading lazy används för att spara data och presetnanda-->
+          </a>
+        </div>
+
+        <div class="carousel-image-box"><!--Bild för sida 1-->
+          <img src="images/logo-big.webp" alt="Floria Flowers loggotyp" loading="lazy">
+        </div>
+
+        <div class="carousel-text-box"> <!--Text för sida 1-->
+          <h1>Välkommen till vårt gröna paradis</h1>
+          <p>Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna
+            växter. Vi är övertygade om att du kommer hitta något som passar just dig!</p>
+          <a href="flowers.html" class="call-to-action">Se vårt utbud</a> <!--Knapp för direkt shopping-->
+          <div class="carousel-indicator">
+            <p><strong>_ </strong>_ _</p> <!--Signifier för vilken sida i karusellen som användaren befinner sig på-->
+          </div>
+        </div>
+
+        <div class="carousel-arrow-box"> <!--Högerpil-->
+          <a href="#carousel-start-slide-2"><!--Hoppar till sida 2 i karusellen, detta ankare avänds av javascript-->
+            <img src="images/chevron-right.svg" alt="Högerpil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item-box" id="carousel-start-slide-2">
+        <div class="carousel-arrow-box">
+          <a href="#carousel-start-slide-1">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-image-box">
+          <a href="subscription.html">
+            <img src="images/season.webp" alt="Bild på Julstjärna" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-text-box">
+          <h1>Säsongens favoriter till din dörr</h1>
+          <p><strong>Just nu:</strong> Julstjärna, Amaryllis & Hyacint</p>
+          <a href="subscription.html" class="call-to-action">Prenumerera på säsongens blommor</a>
+          <div class="carousel-indicator">
+            <p>_ <strong>_</strong> _</p>
+          </div>
+        </div>
+        <div class="carousel-arrow-box">
+          <a href="#carousel-start-slide-3">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+
+      <div class="carousel-item-box" id="carousel-start-slide-3">
+        <div class="carousel-arrow-box">
+          <a href="#carousel-start-slide-2">
+            <img src="images/chevron-left.svg" alt="Vänster pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+
+        <div class="carousel-image-box">
+          <a href="about.html">
+            <img src="images/floria-store.webp" alt="Bild på bukettkorg som görs i ordning" loading="lazy">
+          </a>
+        </div>
+
+        <div class="carousel-text-box">
+          <h1>Välkommen till oss</h1>
+          <address>
+            Blomgatan 7, <br> 2111 47, <br> Malmö
+          </address>
+          <a href="about.html" class="call-to-action">Öppettider och hitta hit</a>
+          <div class="carousel-indicator">
+            <p>_ _ <strong>_</strong></p>
+          </div>
+        </div>
+
+        <div class="carousel-arrow-box">
+          <a href="#carousel-start-slide-1">
+            <img src="images/chevron-right.svg" alt="Höger pil för att bläddra i karusellen" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"> <!--Visuell uppdelning av sidan - har ingen praktisk funktion-->
+      <div class="divider-line"></div><!--Används för en visuell linje - har ingen praktisk funktion-->
+      <div class="divider-image">
+        <img src="images/pictogram/seeds1.svg" alt="piktogram av fröpåse" loading="lazy">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/plant1.svg" alt="piktogram av växt" loading="lazy">
+      </div>
+      <div class="divider-line"></div><!--Används för en visuell linje - har ingen praktisk funktion-->
+    </div>
+
+    <div class="column-content"> <!--Sektion med innehåll i kolumner-->
+      <div class="column-box-small">
+        <!--Denna klass definerar att innehållet i kolumnerna inte tar upp så mycket plats-->
+        <div class="column-image-box">
+          <a href="campaign.html"><img class="column-image-small" src="images/flowers/summer.jpg"
+              alt="Flera blommor i kruka på bänk" loading="lazy"></a>
+          <!--Denna klass definerar att bilderna i kolumnerna inte tar upp så mycket plats-->
+        </div>
+        <div class="column-text-box">
+          <h3><a href="campaign.html" class="heading-link">Kampanj</a></h3>
+        </div>
+      </div>
+
+      <div class="column-box-small">
+        <div class="column-image-box">
+          <a href="flowers.html"><img class="column-image-small" src="images/flowers/peony.jpg" alt="Pion i vas"
+              loading="lazy"></a>
+        </div>
+        <div class="column-text-box">
+          <h3><a href="flowers.html" class="heading-link">Blommor</a></h3>
+        </div>
+      </div>
+
+      <div class="column-box-small">
+        <div class="column-image-box">
+          <a href="seeds.html"><img class="column-image-small" src="images/flowers/parsley.jpg"
+              alt="Fröer av Bladpersilja" loading="lazy"></a>
+        </div>
+        <div class="column-text-box">
+          <h3><a href="seeds.html" class="heading-link">Fröer</a></h3>
+        </div>
+      </div>
+
+      <div class="column-box-small">
+        <div class="column-image-box">
+          <a href="plants.html"><img class="column-image-small" src="images/flowers/pothos.jpg" alt="Gullranka i kruka"
+              loading="lazy"></a>
+        </div>
+        <div class="column-text-box">
+          <h3><a href="plants.html" class="heading-link">Växter</a></h3>
+        </div>
+      </div>
+
+      <div class="column-box-small">
+        <div class="column-image-box">
+          <a href="subscription.html"><img class="column-image-small" src="images/flowers/introbox.jpg"
+              alt="Blommor i låda framför äng" loading="lazy"></a>
+        </div>
+        <div class="column-text-box">
+          <h3><a href="subscription.html" class="heading-link">Prenumeration</a></h3>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="divider">
+      <div class="divider-line"></div>
+      <div class="divider-image">
+        <img src="images/pictogram/plant1.svg" alt="piktogram av växt" loading="lazy">
+        <img src="images/pictogram/seeds1.svg" alt="piktogram av fröpåse" loading="lazy">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <div class="column-content">
+      <div class="column-box">
+        <div class="column-image-box">
+          <img class="column-image" src="images/sustainable.webp" alt="Bild på liten växt i en hand" loading="lazy">
+        </div>
+        <div class="column-text-box-left">
+          <h2>Vi är hållbara</h2>
+          <p><strong>Jorden ska vara lika fin för de som kommer efter oss!</strong><br>
+            Vi gör vad vi kan och väljer våra leverantörer med omsorg och gör vad vi kan för att minska på
+            vattenåtkomst och leveranssträckor.</p>
+        </div>
+      </div>
+
+      <div class="column-box">
+        <div class="column-image-box">
+          <img class="column-image" src="images/familiar.webp"
+            alt="Bild på man och barn som håller händer framför björkar" loading="lazy">
+        </div>
+        <div class="column-text-box-left">
+          <h2>Vi är familjära</h2>
+          <p><strong>Vi är inget utan er!</strong><br>
+            För oss är ni kunder som en förlängning av Floria-familjen. Vi vill att våra lokaler och vårt bemötande
+            ska utstråla värme. Skulle något mot förmodan inte stämma mot din förväntan är att åtgärda det vår första
+            prio.
+          </p>
+        </div>
+      </div>
+
+      <div class="column-box">
+        <div class="column-image-box">
+          <img class="column-image" src="images/scania.webp" alt="Bild på blommor i korg" loading="lazy">
+        </div>
+        <div class="column-text-box-left">
+          <h2>Vi är Skåne</h2>
+          <p><strong>Skånes bästa är världens bästa! </strong><br>
+            Vi väljer Skånebaserade leverantörer när helst möjligt och är engagerade i Malmö och alla fantastiska
+            invånare hon bjuder på.</p>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <!--Vänstra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Information </h4>
+          <p>Blomgatan 7, Malmö.<br>
+            555 - 90 80 70<br>
+            kontakt@floriaflowers.com</p>
+          <p class="italic-footer1">Öppetider:</p>
+          <p>Vardagar 10 - 17<br>
+            Helger 11-16</p>
+        </div>
+
+        <!--Mellersta kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Floria Flowers </h4>
+          <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+          <ul>
+            <li>
+              <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+              <ul>
+                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+        </div>
+
+        <!--Högra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles">Information om ditt köp</h4>
+          <a href="fakelink.html">Köp- och leveransvillkor</a>
+          <a href="fakelink.html">Hemleverans information</a>
+          <a href="fakelink.html">Retur och reklamation</a>
+          <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+        </div>
+      </div>
+
+      <p class="copyright">© Copyright Floria Flowers 2025</p>
+    </div>
+  </footer>
+  <!--Footer slut-->
+
+  <script>
+    function carouselupdate() {
+      // Funktionens namn - Javasricpt för karusell
+
+      const hash = window.location.hash.slice(1);
+      // Hämtar användbar länk till respektive sida i karusellen tex. carousel-test-slide-2
+
+      const slides = document.querySelectorAll('.carousel-item-box');
+      // Väljer HTML element med klassen carousel-item-box och sparar i variablen "slides"
+
+      slides.forEach(slide => {
+        slide.style.display = 'none';
+      });
+      // Går igenom varje slide och sätter display till none (döljer dem)
+
+      if (hash.startsWith('carousel-start-slide-')) {
+        // Kollar om länken börjar med carousel-test-slide- dvs kollar om knapp klickats på)
+        const activeSlide = document.getElementById(hash);
+        // Hämtar sidan esom matchar länken och sparar i variablen "activeSlide"
+        if (activeSlide) {
+          activeSlide.style.display = 'inline-flex';
+          // Sätter "rätt" sida till display inline-flex (visar den)
+        }
+      } else {
+        document.getElementById('carousel-start-slide-1').style.display = 'inline-flex';
+        // Sätter första sidan som standard om ingen knapp klickats på
+      }
+    }
+
+    window.addEventListener('hashchange', carouselupdate);
+    // Kör funktionen när knapp klickas på
+    carouselupdate();
+    // Kör funktionen när sidan laddas
+  </script>
+</body>
 
 </html>

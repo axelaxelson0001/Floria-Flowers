@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+  <title>Blommor | Floria Flowers</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <link href="css/style.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Floria Flowers">
+  <meta name="description"
+    content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+</head>
+
+<body id="start">
+  <!--HEADER-->
+  <header class="header">
+    <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+      <div class="logo-box">
+        <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+        <!--Loggotyp och länk till startsidan-->
+      </div>
+      <div class="search-box"> <!--Sökruta (placeholder)-->
+        <form>
+          <input type="search" placeholder="Sök efter växter, blommor och fröer">
+          <button type="submit"><img class="icon" src="images/search.svg"
+              alt="Sökikon i form av ett förstoringsglas"></button>
+        </form>
+      </div>
+      <div class="icon-box">
+        <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+        <!--Länk till användarens sida-->
+        <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+        <!--Länk till användarens kundvagn-->
+      </div>
+    </nav>
+    <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+      <ul>
+        <li><a href="campaign.html">Kampanj</a></li>
+        <li><a href="flowers.html" class="current-page">Blommor</a></li>
+        <li><a href="seeds.html">Fröer</a></li>
+        <li><a href="plants.html">Växter</a></li>
+        <li><a href="subscription.html">Prenumeration</a></li>
+        <li><a href="about.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+      <a href="campaign.html">
+        <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- PRODUKTGRID - CSS Grid med 3 kolumner 
+         Visar 6 produkter i 2 rader (3×2 layout)
+         Varje produkt är en .card med följande delar:
+         - .media: Cirkelformat bildområde (140×140px med gradient-bakgrund)
+         - .title: Produktnamn + latinskt namn (span lang="la")
+         - .desc: Kort beskrivning (t.ex. "Rosa tulpaner, 10-pack")
+         - .bottom-row: Pris + "Lägg i varukorg"-knapp
+         
+         VARUKORG-LÄNK: Varje "Lägg i varukorg"-knapp länkar till cart.html#<produkt-id>
+         där <produkt-id> motsvarar produktens id i cart.html (t.ex. cart.html#tulpan) 
+    -->
+
+  <main class="flowers">
+    <section class="intro">
+      <!-- Rubrik för Blommor -->
+      <h1>Blommor</h1>
+      <!-- Introtext för Blommor -->
+      <p><strong>Välkommen till vår blomstrande värld!</strong></p>
+      <p>Här har vi samlat blommor av alla slag – från små, charmiga vildblommor till storslagna trädgårdsfavoriter.
+        Varje blomma berättar vår historia.</p>
+      <p>Svårt att välja? Se vår säsongsbaserade prenumerationstjänst <!--Länk till prenumerations sida--> <a
+          href="subscription.html">HÄR</a></p>
+    </section>
+
+    <div class="divider">
+      <!--Viseullt element för uppdelning av sidan-->
+      <div class="divider-line"></div>
+      <div class="divider-image">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+        <img src="images/pictogram/flower1.svg" alt="piktogram av blomma" loading="lazy">
+      </div>
+      <div class="divider-line"></div>
+    </div>
+
+    <!--Produkterna: bild, rubrik, förklarande text samt pris och köp knapp-->
+    <div class="products" id="products">
+      <!-- PRODUKT 1: TULPANER (Tulipa gesneriana) -->
+      <article class="card">
+        <!-- Cirkelformat bildområde - höjd/bredd 140×140px -->
+        <div class="media">
+          <!-- Länk till produktsida -->
+          <a href="products/tulip.html">
+            <img src="images/flowers/tulip.jpg" alt="Rosa tulpaner" loading="lazy">
+          </a>
+        </div>
+        <!-- Produkttitel: Svenskt namn + Latin-namn -->
+        <a href="products/tulip.html">
+          <h3 class="title">Tulpaner (<span lang="la">Tulipa gesneriana</span>)</h3>
+        </a>
+        <!-- Kort beskrivning av produkten -->
+        <p class="desc">Rosa tulpaner, 10-pack</p>
+        <!-- Prisrad: pris + knapp -->
+        <div class="bottom-row">
+          <div class="price">89 kr</div>
+          <!-- VARUKORG-LÄNK: Klick → cart.html#tulpan (visar endast Tulpan-produkten) -->
+          <a class="primary add-btn" href="cart.html#tulpan">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 2: PION (Paeonia lactiflora) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/peony.html">
+            <img src="images/flowers/peony.jpg" alt="Rosa pion" loading="lazy">
+          </a>
+        </div>
+        <a href="products/peony.html">
+          <h3 class="title">Pion (<span lang="la">Paeonia lactiflora</span>)</h3>
+        </a>
+        <p class="desc">Rosa pion, bukett</p>
+        <div class="bottom-row">
+          <div class="price">99 kr</div>
+          <a class="primary add-btn" href="cart.html#pion">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 3: LJUNG (Calluna vulgaris) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/heather.html">
+            <img src="images/flowers/heather.jpg" alt="Rosa Ljung" loading="lazy">
+          </a>
+        </div>
+        <a href="products/heather.html">
+          <h3 class="title">Ljung (<span lang="la">Calluna vulgaris</span>)</h3>
+        </a>
+        <p class="desc">Rosa Ljung</p>
+        <div class="bottom-row">
+          <div class="price">Kampanj 69 kr</div>
+          <a class="primary add-btn" href="cart.html#ljung">Lägg i varukorg</a>
+        </div>
+      </article>
+
+      <!-- PRODUKT 4: ROSOR (Rosa spp.) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/rose.html">
+            <img src="images/flowers/rose.jpg" alt="Rosa Rosor" loading="lazy">
+          </a>
+        </div>
+        <a href="products/rose.html">
+          <h3 class="title">Rosor (<span lang="la">Rosa spp.</span>)</h3>
+        </a>
+        <p class="desc">Rosa Rosor, 10-pack</p>
+        <div class="bottom-row">
+          <div class="price">119 kr</div>
+          <a class="primary add-btn" href="cart.html#rosor">Lägg i varukorg</a>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 5: JULSTJÄRNA (Euphorbia pulcherrima) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/poinsettia.html">
+            <img src="images/flowers/poinsettia.jpg" alt="Röd Julstjärna" loading="lazy">
+          </a>
+        </div>
+        <a href="products/poinsettia.html">
+          <h3 class="title">Julstjärna (<span lang="la">Euphorbia pulcherrima</span>)</h3>
+        </a>
+        <p class="desc">Röd Julstjärna</p>
+        <div class="bottom-row">
+          <div class="price">Kampanj 69 kr</div>
+          <a href="cart.html#julstjarna" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+
+      <!-- PRODUKT 6: SOLROS (Helianthus annuus) -->
+      <article class="card">
+        <div class="media">
+          <a href="products/sunflower.html">
+            <img src="images/flowers/sunflower.jpg" alt="Gul Solros" loading="lazy">
+          </a>
+        </div>
+        <a href="products/sunflower.html">
+          <h3 class="title">Solros (<span lang="la">Helianthus annuus</span>)</h3>
+        </a>
+        <p class="desc">Gul Solros</p>
+        <div class="bottom-row">
+          <div class="price">99 kr</div>
+          <a href="cart.html#solros" class="primary add-btn">Lägg i varukorg</a>
+        </div>
+      </article>
+
+
+    </div>
+
+  </main>
+
+
+  <!--Footer-->
+  <footer class="footer">
+    <div class="footer-wrapper">
+      <div class="footer-container">
+
+        <!--Vänstra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Information </h4>
+          <p>Blomgatan 7, Malmö.<br>
+            555 - 90 80 70<br>
+            kontakt@floriaflowers.com</p>
+          <p class="italic-footer1">Öppetider:</p>
+          <p>Vardagar 10 - 17<br>
+            Helger 11-16</p>
+        </div>
+
+        <!--Mellersta kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles"> Floria Flowers </h4>
+          <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+          <ul>
+            <li>
+              <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+              <ul>
+                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+              </ul>
+            </li>
+          </ul>
+          <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+        </div>
+
+        <!--Högra kolumn-->
+        <div class="footer-column">
+          <h4 class="footer-titles">Information om ditt köp</h4>
+          <a href="fakelink.html">Köp- och leveransvillkor</a>
+          <a href="fakelink.html">Hemleverans information</a>
+          <a href="fakelink.html">Retur och reklamation</a>
+          <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+        </div>
+      </div>
+
+      <p class="copyright">© Copyright Floria Flowers 2025</p>
+    </div>
+  </footer>
+  <!--Footer slut-->
+
+</body>
+
+</html>

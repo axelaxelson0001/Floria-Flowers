@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <title>Tack! | Floria Flowers</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link href="css/style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Floria Flowers">
+    <meta name="description"
+        content="Hos oss hittar du ett stort sortiment av blommor i alla dess färger och former, hundratals fröer och gröna växter. Vi är övertygade om att du kommer hitta något som passar just dig!">
+</head>
+
+<body id="start">
+
+    <!--HEADER-->
+    <header class="header">
+        <nav class="top-nav"><!-- Översta delen av navigeringen med sök mm-->
+            <div class="logo-box">
+                <a href="index.html"><img class="logo" src="images/logo.png" alt="Floria Flowers Logotyp"></a>
+                <!--Loggotyp och länk till startsidan-->
+            </div>
+            <div class="search-box"> <!--Sökruta (placeholder)-->
+                <form>
+                    <input type="search" placeholder="Sök efter växter, blommor och fröer">
+                    <button type="submit"><img class="icon" src="images/search.svg"
+                            alt="Sökikon i form av ett förstoringsglas"></button>
+                </form>
+            </div>
+            <div class="icon-box">
+                <a href="my-page.html"><img class="icon" src="images/user.svg" alt="Ikon av en person"></a>
+                <!--Länk till användarens sida-->
+                <a href="cart.html"><img class="icon" src="images/shopping-cart.svg" alt="Ikon av en kundvagn"></a>
+                <!--Länk till användarens kundvagn-->
+            </div>
+        </nav>
+        <nav class="mid-nav"> <!-- Mellestera delen av navigeringen med sidlänkar-->
+            <ul>
+                <li><a href="campaign.html">Kampanj</a></li>
+                <li><a href="flowers.html">Blommor</a></li>
+                <li><a href="seeds.html">Fröer</a></li>
+                <li><a href="plants.html">Växter</a></li>
+                <li><a href="subscription.html">Prenumeration</a></li>
+                <li><a href="about.html">Om oss</a></li>
+            </ul>
+        </nav>
+        <nav class="campaign-banner"> <!-- Nedersta delen av navigeringen med kampanj-->
+            <a href="campaign.html">
+                <p> Just nu: <strong>15%</strong> på all ljung</p> <!-- Aktuell prioriterad kampanj-->
+            </a>
+        </nav>
+    </header>
+
+
+    <!-- HUR SIDAN FUNGERAR:
+           1. Från cart.html klickar användaren "Köp" för en produkt
+           2. Det länkas till confirm-page.html#tulpan (eller annan produkt)
+           3. confirm-page laddar och CSS gör att endast den bekräftelsen visas
+           4. .default-message (generell text) visas om sidan öppnas utan fragment
+           5. .confirmed-item:target { display: block; } visar rätt produkt-bekräftelse
+    -->
+
+
+    <main class="confirm-page">
+        <section class="confirm">
+            <h1>Tack för din beställning!</h1>
+
+            <!-- GENERELL BEKRÄFTELSETEXT (visas när sidan öppnas utan fragment) -->
+            <p class="default-message">Vi har mottagit din beställning. Du får en bekräftelse till din e-post (det här
+                är en demo).</p>
+
+            <!-- PRODUKT-SPECIFIKA BEKRÄFTELSER (visas via :target när fragment matchar id)
+             Varje artikel är dold som standard och blir synlig när:
+             confirm-page.html#<produkt-id> matches med artikelns id-attribut -->
+
+            <!-- BEKRÄFTELSE 1: TULPANER -->
+            <article id="tulpan" class="confirmed-item">
+                <h2>Tulpaner</h2>
+                <p>Tack! Du har köpt <strong>Tulpaner (10-pack)</strong> — 89 kr.</p>
+                <p><a href="flowers.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+            <!-- BEKRÄFTELSE 2: PION -->
+            <article id="pion" class="confirmed-item">
+                <h2>Pion</h2>
+                <p>Tack! Du har köpt <strong>Pion (bukett)</strong> — 99 kr.</p>
+                <p><a href="flowers.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+            <!-- BEKRÄFTELSE 3: LJUNG -->
+            <article id="ljung" class="confirmed-item">
+                <h2>Ljung</h2>
+                <p>Tack! Du har köpt <strong>Ljung</strong> — 69 kr.</p>
+                <p><a href="flowers.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+            <!-- BEKRÄFTELSE 4: ROSOR -->
+            <article id="rosor" class="confirmed-item">
+                <h2>Rosor</h2>
+                <p>Tack! Du har köpt <strong>Rosor (10-pack)</strong> — 119 kr.</p>
+                <p><a href="flowers.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+            <!-- BEKRÄFTELSE 5: JULSTJÄRNA -->
+            <article id="julstjarna" class="confirmed-item">
+                <h2>Julstjärna</h2>
+                <p>Tack! Du har köpt <strong>Julstjärna</strong> — 69 kr.</p>
+                <p><a href="flowers.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+            <!-- BEKRÄFTELSE 6: SOLROS -->
+            <article id="solros" class="confirmed-item">
+                <h2>Solros</h2>
+                <p>Tack! Du har köpt <strong>Solros</strong> — 99 kr.</p>
+                <p><a href="flowers.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 7: MONSTERA -->
+            <article id="monstera" class="confirmed-item">
+                <h2>Monstera</h2>
+                <p>Tack! Du har köpt <strong>Monstera</strong> — 119 kr.</p>
+                <p><a href="plants.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 8: AMPELLILJA -->
+            <article id="ampellilja" class="confirmed-item">
+                <h2>Ampellilja</h2>
+                <p>Tack! Du har köpt <strong>Ampellilja</strong> — 99 kr.</p>
+                <p><a href="plants.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 9: FIOLFIKUS -->
+            <article id="fiolfikus" class="confirmed-item">
+                <h2>Fiolfikus</h2>
+                <p>Tack! Du har köpt <strong>Fiolfikus</strong> — 129 kr.</p>
+                <p><a href="plants.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 10: MURGRÖNA -->
+            <article id="murgrona" class="confirmed-item">
+                <h2>Murgröna</h2>
+                <p>Tack! Du har köpt <strong>Murgröna</strong> — 119 kr.</p>
+                <p><a href="plants.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 11: GULLRANKA -->
+            <article id="gullranka" class="confirmed-item">
+                <h2>Gullranka</h2>
+                <p>Tack! Du har köpt <strong>Gullranka</strong> — 129 kr.</p>
+                <p><a href="plants.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 12: KLÄTTERKALLA -->
+            <article id="klatterkalla" class="confirmed-item">
+                <h2>Klätterkalla</h2>
+                <p>Tack! Du har köpt <strong>Klätterkalla</strong> — 119 kr.</p>
+                <p><a href="plants.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 13: BASILIKA -->
+            <article id="basilika" class="confirmed-item">
+                <h2>Basilika</h2>
+                <p>Tack! Du har köpt <strong>Basilika</strong> — 49 kr.</p>
+                <p><a href="seeds.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 14: BLADPERSILJA -->
+            <article id="bladpersilja" class="confirmed-item">
+                <h2>Bladpersilja</h2>
+                <p>Tack! Du har köpt <strong>Bladpersilja</strong> — 49 kr.</p>
+                <p><a href="seeds.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 15: DILL -->
+            <article id="dill" class="confirmed-item">
+                <h2>Dill</h2>
+                <p>Tack! Du har köpt <strong>Dill</strong> — 39 kr.</p>
+                <p><a href="seeds.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 16: GURKA -->
+            <article id="gurka" class="confirmed-item">
+                <h2>Gurka</h2>
+                <p>Tack! Du har köpt <strong>Gurka</strong> — 39 kr.</p>
+                <p><a href="seeds.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 17: MOROT -->
+            <article id="morot" class="confirmed-item">
+                <h2>Morot</h2>
+                <p>Tack! Du har köpt <strong>Morot</strong> — 49 kr.</p>
+                <p><a href="seeds.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 18: KÖRSBÄRSTOMAT -->
+            <article id="korsbarstomat" class="confirmed-item">
+                <h2>Körsbärstomat</h2>
+                <p>Tack! Du har köpt <strong>Körsbärstomat</strong> — 49 kr.</p>
+                <p><a href="seeds.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 19: STORODLARN -->
+            <article id="storodlarn" class="confirmed-item">
+                <h2>Storodlarn’</h2>
+                <p>Tack! Du har köpt prenumerationstjänsten <strong>Storodlarn’</strong> — 499kr/kvartal </p>
+                <p><a href="subscription.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 20: GRÖNA FINGRAR -->
+            <article id="gronafingrar" class="confirmed-item">
+                <h2>Gröna fingrar</h2>
+                <p>Tack! Du har köpt prenumerationstjänsten <strong>Gröna fingrar</strong> — 299kr/kvartal </p>
+                <p><a href="subscription.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+
+            <!-- BEKRÄFTELSE 21: INTROLÅDAN -->
+            <article id="introladan" class="confirmed-item">
+                <h2>Introlådan</h2>
+                <p>Tack! Du har köpt prenumerationstjänsten <strong>Introlådan</strong> — 299kr </p>
+                <p><a href="subscription.html" class="primary add-btn">Fortsätt handla</a></p>
+            </article>
+
+        </section>
+    </main>
+
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer-wrapper">
+            <div class="footer-container">
+
+                <!--Vänstra kolumn-->
+                <div class="footer-column">
+                    <h4 class="footer-titles"> Information </h4>
+                    <p>Blomgatan 7, Malmö.<br>
+                        555 - 90 80 70<br>
+                        kontakt@floriaflowers.com</p>
+                    <p class="italic-footer1">Öppetider:</p>
+                    <p>Vardagar 10 - 17<br>
+                        Helger 11-16</p>
+                </div>
+
+                <!--Mellersta kolumn-->
+                <div class="footer-column">
+                    <h4 class="footer-titles"> Floria Flowers </h4>
+                    <a id="omfloria" href="about.html"> Om Floria Flowers </a>
+                    <ul>
+                        <li>
+                            <a id="sortiment" href="flowers.html">Vårat sortiment</a>
+                            <ul>
+                                <li class="bottom-dropdown"><a href="flowers.html">Flower</a></li>
+                                <li class="bottom-dropdown"><a href="plants.html">Plant</a></li>
+                                <li class="bottom-dropdown"><a href="seeds.html">Seeds</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <a id="subscription" href="subscription.html">Säsongsprenumeration</a>
+                </div>
+
+                <!--Högra kolumn-->
+                <div class="footer-column">
+                    <h4 class="footer-titles">Information om ditt köp</h4>
+                    <a href="fakelink.html">Köp- och leveransvillkor</a>
+                    <a href="fakelink.html">Hemleverans information</a>
+                    <a href="fakelink.html">Retur och reklamation</a>
+                    <a href="fakelink.html">Integritets- och cookiepolicy</a>
+
+                </div>
+            </div>
+
+            <p class="copyright">© Copyright Floria Flowers 2025</p>
+        </div>
+    </footer>
+    <!--Footer slut-->
+
+</body>
+
+</html>
