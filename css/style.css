@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+/*Import av specifika typsnitt*/
+
+/*Global nollställning för att undvika layoutproblem*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FÄRGSCHEMA:
+   - #3E5539: Mörkgrön (header bakgrund, text)
+   - #C6E6BF: Ljusgrön (navigering, bakgrund)
+   - #FFD2DD: Rosa/ljusrosa (knappar, banner)
+*/
+
+/*Inställningar för huvuddelen av innehållet*/
+body {
+    background: #ffffff;
+    font-family: arial, sans-serif;
+    display: grid;
+    /*grid  används för att enkelt applicera element från wireframes*/
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    row-gap: 2vh;
+    column-gap: 2vw;
+    overflow-x: hidden;
+    /*döljer eventuell horizontell scroll*/
+}
+
+main {
+    grid-row: 2 / 6;
+    grid-column: 1 / 7;
+}
+
+h1 {
+    color: #3E5539;
+    font-family: Arvo, serif;
+    font-size: 32px;
+    margin-bottom: 2vh;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #3E5539;
+    font-family: Montserrat, sans-serif;
+    margin-bottom: 2vh;
+}
+
+p {
+    line-height: 1.6;
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 2vh;
+    max-width: 100ch;
+}
+
+.heading-link:link {
+    color: #3E5539;
+    text-decoration: none;
+}
+
+.heading-link:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+.heading-link:hover {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+
+/*Header*/
+header {
+    grid-row: 1 / 2;
+    grid-column: 1 / 7;
+}
+
+/*Header - första navigationslisten*/
+.top-nav {
+    grid-row: 1 / 2;
+    grid-column: 3 / 7;
+    background-color: #3E5539;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 3vw;
+}
+
+.top-nav .logo {
+    max-width: 150px;
+    filter: drop-shadow(3px 3px 3px #C6E6BF);
+}
+
+
+/*Header - första navigationslisten - Sök*/
+.search-box form {
+    display: flex;
+    align-items: center;
+}
+
+.search-box input {
+    height: 2vh;
+    padding: 2vh;
+    border-radius: 50vw;
+    width: 40vw;
+    font-size: large;
+    border: 1px solid #C6E6BF;
+    background-color: #3E5539;
+    color: #C6E6BF;
+
+}
+
+.search-box input:focus {
+    outline: none;
+    border: 2px solid #C6E6BF;
+    background-color: #3E5539;
+    color: #ffffff;
+}
+
+.search-box input::placeholder,
+textarea::placeholder {
+    color: #C6E6BF;
+}
+
+.search-box button {
+    max-height: 2vh;
+    margin-left: -4vh;
+    /*Drar in ikonen i sökfältet*/
+    cursor: pointer;
+    margin-top: -10px;
+    background: none;
+    border: none;
+}
+
+/*Header - första navigationslisten - ikoner*/
+.top-nav .icon {
+    max-height: 2.5vh;
+}
+
+.top-nav .icon-box {
+    display: flex;
+    gap: 4vw;
+    align-items: center;
+
+}
+
+/*Header - andra navigationslisten*/
+.mid-nav {
+    background-color: #C6E6BF;
+    display: flex;
+    padding: 2vh 2vw;
+    justify-content: center;
+
+}
+
+.mid-nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 2vw;
+}
+
+.mid-nav ul li a {
+    color: #000000;
+    text-decoration: none;
+    margin: 5px;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+}
+
+.mid-nav ul li a:hover {
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.mid-nav ul li a.current-page {
+    font-weight: 700;
+}
+
+/*Header - kampanjbanner*/
+.campaign-banner {
+    background-color: #FFD2DD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1vh 2vw;
+}
+
+.campaign-banner p {
+    color: #000000;
+    margin-bottom: 0;
+    max-width: none;
+
+}
+
+.campaign-banner a {
+    text-decoration: none;
+}
+
+/*Komponent - Karusell*/
+.carousel-item-box {
+    gap: 4vw;
+    width: 100%;
+}
+
+.carousel-indicator {
+    width: 45%;
+    margin-top: auto;
+    text-align: center;
+}
+
+.carousel-arrow-box {
+    width: 5%;
+    cursor: pointer;
+    align-content: center;
+    text-align: center;
+}
+
+.carousel-arrow-box img {
+    width: 30px;
+}
+
+.carousel-image-box {
+    width: 30%;
+}
+
+.carousel-image-box img {
+    width: 90%;
+
+    border-radius: 50%;
+}
+
+.carousel-text-box {
+    width: 60%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+    justify-content: center;
+    padding-top: 75px;
+}
+
+
+/*Komponent - kolumner med text/bild*/
+.column-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    flex-wrap: wrap;
+    /*Ser till att rutorna hamnar under varandra på små skärmar*/
+}
+
+.column-box {
+    width: 30%;
+    padding-top: 2vh;
+}
+
+.column-box-small {
+    width: 15vw;
+    padding-top: 2vh;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.column-image {
+    width: 70%;
+    border-radius: 10px;
+    height: 70%;
+    aspect-ratio: 1 / 1;
+}
+
+.column-image-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.column-text-box {
+    padding-top: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.column-text-box-left {
+    padding-top: 30px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.column-image-small {
+    height: 12vh;
+    border-radius: 50%;
+}
+
+.column-text-box p {
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+/*Kolumn formulär */
+
+.column-form-box form {
+    display: block;
+    text-align: center;
+}
+
+.column-form-box input {
+    height: 1vh;
+    padding: 1vh;
+    margin: 5px;
+    border-radius: 50vw;
+    width: 20vw;
+    border: 1px solid #3E5539;
+    background-color: #ffffff;
+    color: #3E5539;
+}
+
+.column-form-box input:focus {
+    outline: none;
+    border: 2px solid #3E5539;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.column-form-box input::placeholder,
+textarea::placeholder {
+    color: #3E5539;
+}
+
+.column-form-box button {
+    display: block;
+    border: none;
+    cursor: pointer;
+}
+
+.column-form-box .call-to-action {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.column-form-box a {
+    display: block;
+    text-align: center;
+    color: #3E5539;
+    font-weight: 300;
+}
+
+.column-form-box a:visited {
+    color: #000000;
+}
+
+.column-form-box a:hover {
+    color: #000000;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.my-page {
+    /*La till min-height för att trycka ner footern*/
+    min-height: 60vh;
+}
+
+/* Rosa knappar */
+
+/* .buy-btn används i cart.html för att gå direkt till order-confirmed. 
+Knappen saknar faktiskt köp-logik (ingen betalning). 
+För riktig funktionalitet krävs JavaScript. */
+
+.add-btn,
+.buy-btn,
+.productcard .btn,
+.call-to-action {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    padding: 10px 20px;
+    background-color: #FFD2DD;
+    border-radius: 50px;
+    color: #000000;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    width: fit-content;
+}
+
+.call-to-action:after {
+    content: " ➔";
+}
+
+.add-btn,
+.buy-btn,
+.productcard .btn,
+.call-to-action:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+/* Blommor/fröer/växter */
+
+.i a {
+    display: block;
+    text-align: center;
+    color: #3E5539;
+    font-weight: 300;
+}
+
+.intro a:visited {
+    color: #3E5539;
+    /* Färg på länk text innan pekaren är över */
+}
+
+.intro a:hover {
+    color: #000000;
+    /* Färg på länk text när pekaren är över */
+    font-weight: 400;
+}
+
+/* Shop card styles (icons) */
+.products {
+    display: grid;
+    /* 3 produkter per rad */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+    padding: 1vh 1vw 4vh 1vw;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center
+}
+
+.media {
+    height: 140px;
+    width: 140px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.9rem;
+    background: linear-gradient(135deg, #F6FFF6, #E8F7EB);
+    box-shadow: inset 0 -6px 12px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.media img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+}
+
+
+.title {
+    font-size: 1rem;
+    margin: 0.3rem 0 0.2rem 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+.title:hover {
+    text-decoration: underline;
+}
+
+.desc {
+    font-size: 0.85rem;
+    color: #3E5539;
+    margin-bottom: 0.6rem
+}
+
+.price {
+    font-weight: 700;
+    color: #3E5539;
+    margin-bottom: 2vh;
+}
+
+
+/* Varukorg (cart.html) */
+.cart-item {
+    padding: 3vh 2vw;
+    display: none;
+    /* Dold som standard */
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    text-align: left;
+}
+
+.cart {
+    padding: 3vh 2vw;
+    /*La till min-height för att trycka ner footern*/
+    min-height: 60vh;
+}
+
+.cart-item:target {
+    display: flex;
+    /* Synlig när fragment matchar id */
+}
+
+.cart-item .media.small {
+    width: 84px;
+    height: 84px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+
+.cart-item:target~.empty-message {
+    display: none;
+    /* Göm tom-meddelande när produkt visas */
+}
+
+.checkout-page {
+    padding: 3vh 2vw;
+}
+
+.checkout-instructions {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Bekräftelse (order-confirmed.html) */
+
+.confirm-page {
+    padding: 3vh 2vw;
+}
+
+.confirm h1 {
+    color: #3E5539;
+}
+
+.confirm h2 {
+    text-align: left;
+}
+
+.confirmed-item {
+    display: none;
+    /* Dold som standard */
+    background: #fff;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    margin-bottom: 1rem;
+}
+
+.confirmed-item:target {
+    display: block;
+    /* Synlig när fragment matchar id */
+}
+
+.confirmed-item:target~.default-message,
+.default-message:target {
+    display: none;
+    /* Göm default-meddelande när produkt visas */
+}
+
+
+/* About/Om oss */
+.about {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2vh 2vw;
+    text-align: center;
+}
+
+/* Ikoner */
+.about-icons {
+    width: 60px;
+    height: 60px;
+    padding-bottom: 2vh;
+}
+
+.icon-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 3vh;
+    justify-items: center;
+    margin-right: auto;
+    box-sizing: border-box;
+    padding-right: 30vh;
+    padding-left: 30vh;
+}
+
+.icon-button-item {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 0;
+    justify-items: center;
+    margin: 3vh 0 3vh;
+}
+
+.icon-button-item:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+}
+
+/*Footer*/
+footer {
+
+    background-color: #3E5539;
+    width: 100%;
+    margin: 0;
+    grid-row: 6;
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 30vh;
+}
+
+.footer-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+}
+
+.footer-container {
+    padding: 2vh 0 2vh 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8vw;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: start;
+    justify-items: center;
+    text-align: left;
+    color: #fff;
+}
+
+/* Kolumner i footer x3 */
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 2vh;
+}
+
+.footer-column:nth-child(2) {
+    margin-left: 2vw;
+}
+
+.footer-column:nth-child(3) a {
+    margin-bottom: 1vh;
+}
+
+footer a,
+.footer-column a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    text-decoration-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 0.5vh;
+}
+
+.footer-column a+ul {
+    margin-top: 0.5vh;
+}
+
+footer a:hover,
+footer a:focus {
+    color: #ffffff;
+    outline: none;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-dropdown {
+    display: none;
+}
+
+.sortiment a {
+    display: inline;
+}
+
+.footer-column p {
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.footer-titles+p,
+.footer-titles+a,
+.footer-titles+ul {
+    margin-top: 0;
+}
+
+.footer-titles {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 1vh;
+}
+
+.italic-footer1 {
+    font-style: italic;
+    margin: 0;
+}
+
+.italic-footer+p {
+    margin: 0;
+}
+
+#omfloria {
+    margin-bottom: 0.5vh;
+}
+
+#subscription {
+    margin-top: 0.5vh;
+}
+
+.copyright {
+    color: #FFFFFF;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 1vh;
+    opacity: 0.6;
+}
+
+/*Footer slutar*/
+
+/*Intro*/
+.intro {
+    padding: 2vh 2vw 1vh 4vw;
+}
+
+/* Divder med piktogram */
+.divider {
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    box-sizing: border-box;
+    margin: 30px 0;
+}
+
+.divider-line {
+    flex-grow: 1;
+    /* Strechar ut linjen */
+    height: 1px;
+    background-color: #3E5539;
+}
+
+.divider-image {
+    display: flex;
+    gap: 10px;
+    margin: 0 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+.divider-image img {
+    max-height: 50px;
+    width: auto;
+    display: block;
+}
+
+/* --- PRODUKTCARD CSS (blommor, växter och frön) --- */
+
+.productcard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.productcard .card {
+    background: #ffffff;
+    width: 760px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.productcard .columns {
+    display: flex;
+    gap: 20px;
+}
+
+.productcard .left-col {
+    width: 40%;
+}
+
+.productcard .image-box img {
+    width: 100%;
+    max-height: 260px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.productcard .right-col {
+    width: 60%;
+}
+
+.right-col h2,
+h3 {
+    text-align: center;
+}
+
+.productcard .description {
+    margin-top: 10px;
+    line-height: 1.5;
+    color: #444;
+}
+
+.productcard .price-box {
+    margin-top: 20px;
+}
+
+.productcard .price-label {
+    font-size: 18px;
+    color: #444;
+}
+
+.productcard .price {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.productcard .badge {
+    position: absolute;
+    top: 15px;
+    left: -10px;
+    background: #3c6d47;
+    color: white;
+    padding: 18px 32px;
+    border-radius: 50px;
+    font-size: 20px;
+    transform: rotate(-15deg);
+    font-weight: bold;
+}
