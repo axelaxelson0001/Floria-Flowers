@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="sv"><!--Berättar att sidans huvudsakliga språk är svenska, viktigt för både tillgänglighet och sökmotorer-->
+
+<head>
+    <title>Introlådan | Floria Flowers</title>
+    <!--anger sidans titel som visas i fliken i webbläsaren och används även av sökmotorer som rubrik i sökresultat.-->
+    <link rel="icon" type="image/x-icon" href="../images/favicon.ico"><!--Ikon som syns i webbläsaren-->
+    <link href="../css/style.css" rel="stylesheet"><!-- Relativ sökväg "../" används då denn fil är i en undermapp -->
+    <meta charset="UTF-8"><!--säkerställer att svenska tecken fungerar rätt-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- sidans bredd ska följa enhetens skärmbredd, sidan zoomas inte in eller ut initialt.-->
+    <meta name="author" content="Floria Flowers"><!-- Upphovsansvarig, användbart för Sökmotorer. -->
+    <meta name="description" content="Produktkort för Introlådan – Floria Flowers">
+    <!-- Anger sidans innehåll, användbart för sökmotorer-->
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <!-- <header> är ett semantiskt element som markerar sidans toppsektion.
+        Klassen "header" används för styling i CSS (t.ex. bakgrundsfärg, padding, layout). -->
+    <header class="header">
+
+        <!-- Första navigationsområdet i headern: top-nav.
+            Detta innehåller logotyp, sökfält och ikoner för användare och kundvagn.
+            <nav> signalerar för både webbläsare och hjälpmedel att detta är navigationsrelaterat innehåll.-->
+        <nav class="top-nav">
+            <!-- logo-box: wrapper runt logotypen. Används för positionering i layout.-->
+            <div class="logo-box">
+                <!-- Logotypen är länkad till startsidan (index.html).
+                    Relativ sökväg "index.html" innebär att denna fil ligger i samma mapp som HTMLfilen.
+                    alt-texten beskriver logotypen för skärmläsare och om bilden inte kan laddas.-->
+                <a href="../index.html"><img class="logo" src="../images/logo.png" alt="Floria Flowers Logotyp"></a>
+            </div>
+
+            <!-- search-box: container som innehåller sökformuläret. -->
+            <div class="search-box">
+                <form>
+                    <!-- type="search" ger ett textfält för sökningar.
+                        Här kan användaren skriva in sökord (ex: växter, blommer, fröer).-->
+                    <input type="search" placeholder="Sök efter växter, blommer och fröer">
+                    <!-- Bildikon som visuellt symboliserar sökfunktionen (förstoringsglas). -->
+                    <button type="submit"><img class="icon" src="../images/search.svg"
+                            alt="Sökikon i form av ett förstoringsglas"></button>
+                </form>
+            </div>
+
+            <!-- icon-box innehåller ikoner för användarens sida ("min sida") och kundvagn.
+                Dessa länkar gör det lätt för användaren att snabbt navigera till sitt konto och sin varukorg. -->
+            <div class="icon-box">
+                <!-- 
+                    Länk till användarens personliga sida (my-page.html).
+                    Ikonen föreställer en person och fungerar som visuell representation av "konto" eller "logga in".
+                -->
+                <a href="../my-page.html"><img class="icon" src="../images/user.svg" alt="Ikon av en person"></a>
+
+                <!--  Länk till kundvagnssidan (cart.html).
+                    Ikonen föreställer en kundvagn, vilket är en viktig symbol för e-handel och inköp.-->
+                <a href="../cart.html"><img class="icon" src="../images/shopping-cart.svg"
+                        alt="Ikon av en kundvagn"></a>
+            </div>
+        </nav>
+
+        <!-- Andra navigationsområdet: mid-nav.
+            Innehåller huvudmenyn med de olika produktkategorierna och informationssidorna.
+            <ul> är en oordnad lista där varje <li> representerar en menyflik. -->
+        <nav class="mid-nav">
+            <ul>
+                <!-- Varje <li> innehåller en <a>-tagg som länkar till respektive sida.
+                    Sökvänliga och tydliga länknamn underlättar både för användare och sökmotorer.-->
+
+                <li><a href="../campaign.html">Kampanj</a></li>
+                <li><a href="../flowers.html">Blommor</a></li>
+                <li><a href="../seeds.html">Fröer</a></li>
+                <li><a href="../plants.html">Växter</a></li>
+                <li><a href="../subscription.html">Prenumeration</a></li>
+                <li><a href="../about.html">Om oss</a></li>
+            </ul>
+        </nav>
+
+        <!-- Tredje nav-sektionen är en campaign-banner.
+            Detta används som en horisontell banner för aktuella kampanjer/erbjudanden.
+            Hela banderollen är klickbar och leder till kampanjsidan. -->
+        <nav class="campaign-banner">
+            <a href="../campaign.html">
+                <!--  <p>-elementet innehåller kampanjtexten.
+                    <strong> markerar viktiga ord (här rabatt 15%), vilket både ger en visuell betoning och har en semantisk betydelse.-->
+                <p>Just nu: <strong>15%</strong> på all ljung</p>
+            </a>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <!--  <main> innehåller sidans huvudsakliga innehåll.
+        Här ligger produktkortet för Introlådan. Semantiskt viktigt då det hjälper skärmläsare att förstå var huvudinformationen finns. -->
+    <main>
+        <!-- productcard med en övergripande wrapper runt hela produktkortet.
+            Används här för att styla marginaler, centrera innehåll, lägga skuggor osv runt hela kortet. -->
+        <div class="productcard">
+            <!--  card är själva kortkomponenten, för bakgrund, rundade hörn och skugga.-->
+            <div class="card">
+
+                <!-- columns: container som delar upp card-innehållet i två kolumner. -->
+                <div class="columns">
+
+                    <!-- left-col: vänster kolumn i produktkortet.
+                        Här visas främst produktbilden. -->
+                    <div class="left-col">
+                        <!-- image-box är en wrapper runt själva bilden, används för att hantera bildens storlek, proportioner, padding etc. -->
+                        <!-- Produktbilden visar Introlådan.
+                                src-atributet pekar ut den faktiska bildfilen i katalogen "../images/flowers".
+                                Alt-texten beskriver bilden, vilket är viktigt för tillgänglighet och SEO. -->
+                        <div class="image-box">
+                            <img src="../images/flowers/introbox.jpg" alt="Introlådan Prenumeration">
+                        </div>
+                    </div>
+
+                    <!-- right-col: höger kolumn i produktkortet.
+                        Innehåller textinformation om produkten: namn, beskrivning, pris och knapp för att lägga i kundvagn.-->
+                    <div class="right-col">
+                        <!-- Huvudrubrik för produkten.
+                            Själva namnet "Introlådan" står överst,  medan prenumerationsinfo läggs under <h3>-->
+                        <h2>Introlådan</h2>
+                        <h3> 3 blomstersorter <br> 2 blommor per sort</h3>
+
+
+                        <!--  Beskrivande text om produkten med klassen "description".
+                            Klassen möjliggör speciell typografi.
+                            Texten ger kunden en känsla för produkten och hur den används, vilket är viktigt för att skapa köplust.-->
+                        <p class="description">
+                            Introlådan är den perfekta starten för dig som vill upptäcka blomsterkänslan – lagom stor,
+                            lagom lyxig
+                            och full av liv. Här får du tre noga utvalda blomstersorter, två av varje, som tillsammans
+                            bildar en mjuk
+                            och inbjudande bukett. En enkel väg in i en grönare vardag, utan krav och utan krångel.
+                            <br><br>
+                            Det är buketten som ger hemmet en direkt känsla av värme och stil, och som låter dig prova
+                            dig fram till
+                            vad som verkligen får ditt hem att blomstra.
+                        </p>
+
+                        <!--  price-box wrapper för all prisrelaterad information.
+                            Genom att samla allt i en separat container kan man ge prisdelen tydlig utseende. -->
+                        <div class="price-box">
+                            <!-- price-label: kort text som etikett. -->
+                            <p class="price-label">Pris:</p>
+
+                            <!-- price: själva prisvärdet i SEK -->
+                            <p class="price">299 kr</p>
+
+                            <!-- price-subtitle här är en förklarande text under priset, ex. "engångsköp".
+                                Förtydligar vad priset avser.-->
+                            <p class="price-subtitle">engångsköp</p>
+                        </div>
+
+                        <!--  Länk som fungerar som en knapp tack vare klassen "btn".
+                            href="../cart.html#introladan" betyder att användaren tas till cart.html och direkt till ett specifikt ankare (#introladan).
+                            Detta ger möjlighet att skrolla till rätt produkt i kundvagnen.
+                            Klassen "btn" formger länken så att den visuellt uppfattas som en knapp. -->
+                        <a href="../cart.html#introladan" class="btn">Lägg i kundvagn</a>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- <footer> är ett semantiskt element för sidans nederdel.
+        Innehåller kontaktuppgifter, länkar och information om köp.
+        Viktigt för användaren att snabbt hitta adress, öppettider och villkor.-->
+    <footer class="footer">
+        <!-- footer-wrapper: övergripande container runt allt i footern.
+            Används för att styra bredd, centrering och bakgrund.-->
+        <div class="footer-wrapper">
+            <!-- footer-container håller ihop de tre footer-kolumnerna. -->
+            <div class="footer-container">
+
+                <!-- footer-column här är en av tre kolumner i footern.
+                    Denna första kolumn fokuserar på kontaktinformation och öppettider.-->
+                <div class="footer-column">
+                    <!-- footer-titles är klass för rubriker i footern.  -->
+                    <h4 class="footer-titles">Information</h4>
+
+                    <!-- Kontaktinformation som adress, telefonnummer och e-post till företaget.
+                        <br> används för att skapa radbrytningar inom samma stycke.  -->
+                    <p>Blomgatan 7, Malmö.<br>555 - 90 80 70<br>kontakt@floriaflowers.com</p>
+
+                    <!-- italic-footer1: klass som gör texten kursiv för att markera rubriken "Öppetider:".-->
+                    <p class="italic-footer1">Öppetider:</p>
+
+                    <!-- Visar butikens öppettider för vardagar och helger.
+                     Viktig information för fysiskt besökande kunder. -->
+                    <p>Vardagar 10 - 17<br>Helger 11-16</p>
+                </div>
+
+                <!--  Andra footer-kolumnen med fokus på information om Floria Flowers och sortiment.-->
+                <div class="footer-column">
+                    <h4 class="footer-titles">Floria Flowers</h4>
+
+                    <!-- Länk till "Om oss"-sidan, där besökaren kan läsa mer om företaget. -->
+                    <a id="omfloria" href="../about.html">Om Floria Flowers</a>
+
+                    <!--  Oordnad lista som innehåller "Vårat sortiment".
+                        Detta ger en strukturerad meny över underkategorierna. -->
+                    <ul>
+                        <li>
+                            <!--  Länk till en sida som listar hela sortimentet (flower.html).-->
+                            <a id="sortiment" href="../flower.html">Vårat sortiment</a>
+                            <!-- 
+                                Inre lista (nested list) som används som en "dropdown"-meny i footern. -->
+                            <ul>
+                                <!--  Varje rad i dropdown-länkar till en specifik kategori. -->
+                                <li class="bottom-dropdown"><a href="../flowers.html">Flower</a></li>
+                                <li class="bottom-dropdown"><a href="../plants.html">Plant</a></li>
+                                <li class="bottom-dropdown"><a href="../seeds.html">Seeds</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <!-- 
+                        Länk till sidan för säsongsprenumeration. -->
+                    <a id="subscription" href="../subscription.html">Säsongsprenumeration</a>
+                </div>
+
+                <!--  Tredje footer-kolumnen handlar om köpinformation, leveransvillkor och policyer.
+                    Denna information är juridiskt och praktiskt viktig för e-handel. -->
+                <div class="footer-column">
+                    <!-- Listar flera viktiga textområden som: 
+                        - Köp- och leveransvillkor
+                        - Hemleverans information
+                        - Retur och reklamation
+                        - Integritets- och cookiepolicy
+                        I en fullständig lösning kan dessa vara klickbara länkar till detaljerade sidor, 
+                        men här är de för synsskull, klickbara men till fejkade länkar.-->
+                    <h4 class="footer-titles">Information om ditt köp</h4>
+                    <a href="fakelink.html">Köp- och leveransvillkor</a>
+                    <a href="fakelink.html">Hemleverans information</a>
+                    <a href="fakelink.html">Retur och reklamation</a>
+                    <a href="fakelink.html">Integritets- och cookiepolicy</a>
+                </div>
+            </div>
+
+            <!-- copyright: text längst ner i footern som anger upphovsrätten.
+                ©-symbolen visar att innehållet är skyddat. 
+                Årtalet "2025" hjälper till att visa aktuell version av sidan. -->
+            <p class="copyright">© Copyright Floria Flowers 2025</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
