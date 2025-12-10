@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 64 64">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: #3e5539;
+      }
+    </style>
+  </defs>
+  <g id="eye">
+    <path class="st0" d="M45.5,63.4c.4.4.9.6,1.4.6s1-.2,1.4-.6c.8-.8.8-2.1,0-2.8l-28.3-28.3L48.4,3.9c.8-.8.8-2.1,0-2.8-.8-.8-2.1-.8-2.8,0L15.8,30.8c-.2.2-.4.5-.5.8-.3.7,0,1.6.5,2.1l29.7,29.7Z"/>
+  </g>
+</svg>
